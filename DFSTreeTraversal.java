@@ -19,12 +19,18 @@ public class Exercise {
     }
       
     public void dfsInorder(Tree root){
+        if(root == null)
+            return;
+            
         dfsPreorder(root.left);
         System.out.println(root.data);
         dfsPreorder(root.right);
     }
       
     public void dfsPostorder(Tree root){
+        if(root == null)
+            return;
+            
         dfsPreorder(root.left);
         dfsPreorder(root.right);
         System.out.println(root.data);
