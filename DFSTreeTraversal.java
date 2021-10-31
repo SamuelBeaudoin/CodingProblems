@@ -1,3 +1,6 @@
+//time complexity: O(n)
+//space complexity: O(height of tree)
+
 public class Exercise {
     static class Tree{
         int data;
