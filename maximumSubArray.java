@@ -1,3 +1,6 @@
+//time complexity: O(n)
+//Space complexity: O(1)
+
 public class Exercise {
     public int maximumSubarray(int[] arr){
         
