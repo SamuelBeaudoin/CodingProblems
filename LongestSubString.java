@@ -3,20 +3,20 @@
 
 public class Exercise {
     public int longestSubstringWithoutRepeating(String str){
-        Set<Character> checker = new HashSet<>();
+       Set<Character> checker = new HashSet<>();
         int biggest = 0;
+        int start = 0;
         
-        for(int i = 0; i<str.length();i++){
-            if(!checker.add(str.charAt(i))){
-                if(biggest<checker.size())
-                    biggest=checker.size();
-                checker.clear();
+        for(int i = 0; i<s.length(); i++){
+            if(checker.add(s.charAt(i))){
+                if(checker.size()>biggest)
+                    biggest = checker.size();
             }else{
-                if(biggest<checker.size())
-                    biggest=checker.size();
+                i--;
+                checker.remove(s.charAt(start++));
             }
         }
         
-       return biggest; 
+        return biggest;
     }
 }
